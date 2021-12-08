@@ -1,0 +1,148 @@
+.navbar {
+  padding: 0 20px;
+  @include flexRow;
+  justify-content: space-between;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  box-shadow: $shadow;
+  background: $white;
+
+  .logo-container {
+    @include flexRow;
+
+    .logo {
+      background: url("../../assets/img/akai.jpg");
+      background-size: cover;
+      width: 60px;
+      height: 60px;
+      margin-right: 10px;
+      border-radius: $circle;
+    }
+
+    h3 {
+      color: $darkBlue;
+      font-size: 1.2em;
+
+      @media screen and (max-width: 450px) {
+        display: none;
+      }
+    }
+  }
+
+  ul {
+    @include flexRow;
+    font-size: 18px;
+    width: 400px;
+    height: 100%;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+
+    li {
+      @include flexRow;
+      width: calc(100% / 3);
+      height: 100%;
+      transition: 5s linear;
+
+      a {
+        @include flexRow;
+        justify-content: center;
+        color: $darkBlue;
+        width: 100%;
+        height: 100%;
+        transition: 0.5s ease-in-out;
+
+        &:hover {
+          background: $darkBlue;
+          color: #fff;
+        }
+      }
+
+      .nav-active {
+        background: $darkBlue;
+        color: #fff;
+      }
+    }
+
+    @media screen and (max-width: 850px) {
+      @include flexCol;
+      background: $white;
+      position: absolute;
+      width: 100%;
+      height: initial;
+      top: -500px;
+      box-shadow: $shadow2;
+      right: 0;
+      z-index: -50;
+
+      li {
+        width: 100%;
+
+        a {
+          padding: 20px 0;
+        }
+      }
+    }
+  }
+
+  .toggle {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    @include flexRow;
+    transition: 0.5s;
+    display: none;
+
+    .bar {
+      background: $darkBlue;
+      width: 50px;
+      height: 4px;
+      border-radius: 30px;
+      position: relative;
+      transition: 0.2s;
+
+      &::after,
+      &::before {
+        content: "";
+        background: $darkBlue;
+        width: 50px;
+        height: 4px;
+        border-radius: 30px;
+        position: absolute;
+        transition: 0.2s;
+      }
+
+      &::before {
+        transform: translateY(-15px);
+      }
+      &::after {
+        transform: translateY(15px);
+      }
+    }
+
+    @media screen and (max-width: 850px) {
+      display: flex;
+    }
+  }
+
+  .active-toggle {
+    transform: rotate(360deg);
+    .bar {
+      width: 0;
+
+      &::before {
+        transform: rotate(45deg);
+      }
+
+      &::after {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  .active-ul {
+    top: 80px;
+  }
+}
