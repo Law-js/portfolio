@@ -50,14 +50,3 @@
     text-decoration: none;
   }
 }
-
-@keyframes anim {
-  25% {
-    transform: translateZ(0px);
-    opacity: 1;
-  }
-  32% {
-    opacity: 0;
-    transform: translateZ(-280px) translateX(200px);
-  }
-}

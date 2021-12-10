@@ -111,7 +111,7 @@ const Overlay = () => {
         </Slogan>
       </TopOverlayContainer>
       <BottomOverlayContainer>
-        <Button>
+        <Button title="Vers le site">
           <NavLink exact to="/profil">
             Click Here!
           </NavLink>

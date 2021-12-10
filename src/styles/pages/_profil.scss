@@ -124,7 +124,7 @@
             .list {
               @include flexCol;
               justify-content: flex-start;
-              font-size: 1.5em;
+              font-size: 1.2em;
 
               ul {
                 width: 100%;
@@ -141,7 +141,7 @@
           .qualities {
             margin: 0.025em 0 0;
             ul {
-              font-size: 1.5em;
+              font-size: 1.2em;
             }
           }
         }

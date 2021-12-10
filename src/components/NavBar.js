@@ -11,29 +11,44 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar">
+    <nav className="navbar" role="navigation">
       <div className="logo-container">
         <div className="logo"></div>
         <h3>Pascal Hector</h3>
       </div>
       <ul>
         <li>
-          <NavLink exact to="/profil" activeClassName="nav-active">
+          <NavLink
+            exact
+            to="/profil"
+            activeClassName="nav-active"
+            title="Profil"
+          >
             Profil
           </NavLink>
         </li>
         <li>
-          <NavLink exact to="/portfolio" activeClassName="nav-active">
+          <NavLink
+            exact
+            to="/portfolio"
+            activeClassName="nav-active"
+            title="Portfolio"
+          >
             Portfolio
           </NavLink>
         </li>
         <li>
-          <NavLink exact to="/contact" activeClassName="nav-active">
-            Contact
+          <NavLink
+            exact
+            to="/contact"
+            activeClassName="nav-active"
+            title="Contacts"
+          >
+            Contacts
           </NavLink>
         </li>
       </ul>
-      <div className="toggle" onClick={handleToggle}>
+      <div className="toggle" onClick={handleToggle} title="Navigation">
         <div className="bar"></div>
       </div>
     </nav>

@@ -1,0 +1,459 @@
+.contact {
+  margin-top: 100px;
+  .contact-container {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    box-shadow: $shadow;
+
+    @media screen and (max-width: 850px) {
+      grid-template-columns: 100%;
+    }
+
+    .contact-nav {
+      background: url("./../../assets/textures/8k_earth_nightmap.jpg")
+        center/cover;
+      color: $white;
+
+      .contact-title {
+        border: none;
+        cursor: initial;
+        width: 100%;
+        margin: 50px 0;
+        text-align: center;
+
+        &:hover {
+          letter-spacing: 0;
+          background: initial;
+          color: $white;
+        }
+      }
+
+      ul {
+        @media screen and (max-width: 850px) {
+          @include flexRow;
+          justify-content: center;
+          margin-bottom: 50px;
+        }
+
+        li {
+          cursor: pointer;
+          transition: 0.2s linear;
+          border: 1px solid $white;
+          border-radius: 50px;
+          padding: 10px;
+          width: 150px;
+          margin: 20px auto;
+          font-size: 1.2em;
+          text-align: center;
+
+          &:nth-of-type(1) {
+            margin-top: 0;
+          }
+
+          &:hover {
+            letter-spacing: 2px;
+            background: $white-o;
+            color: $darkBlue;
+          }
+
+          @media screen and (max-width: 850px) {
+            margin: 0 20px;
+          }
+          @media screen and (max-width: 550px) {
+            font-size: 1em;
+            margin: 0 10px;
+            width: 135px;
+          }
+        }
+      }
+
+      .active-btn {
+        background: $white-o;
+        color: $darkBlue;
+      }
+    }
+
+    .form {
+      padding: 100px 50px;
+      width: 90%;
+      max-width: 850px;
+      margin: 0 auto;
+
+      @media screen and(max-width: 550px) {
+        width: 100%;
+        padding: 50px 30px;
+      }
+
+      .row {
+        @include flexRow;
+        justify-content: space-between;
+        text-align: center;
+        margin: 50px 0;
+
+        input {
+          border: none;
+          border-bottom: 1px solid $darkBlue;
+          padding: 5px;
+          outline: none;
+          font-family: $font-2;
+          font-size: 1.3em;
+          color: $black2;
+          height: 40px;
+        }
+
+        .field {
+          width: 40%;
+          margin: 0 auto;
+          max-width: 300px;
+
+          input {
+            width: 100%;
+          }
+        }
+
+        textarea {
+          width: 90%;
+          border: none;
+          border-bottom: 1px solid $darkBlue;
+          padding: 5px;
+          font-family: $font-2;
+          font-size: 1.3em;
+          color: $black2;
+          margin: 0 auto;
+          outline: none;
+          height: 40px;
+        }
+      }
+
+      .btn {
+        text-align: center;
+        margin: 50px 0 20px;
+
+        input {
+          font-size: 1.3em;
+          padding: 10px 20px;
+          border-radius: 50px;
+          border: none;
+          background: $darkBlue;
+          color: grey;
+          cursor: pointer;
+          transition: 0.2s ease-in-out;
+
+          &:hover {
+            color: $white-o;
+          }
+        }
+      }
+
+      .form-message {
+        opacity: 0;
+        text-align: center;
+        font-size: 1.1em;
+
+        @media screen and (max-width: 550px) {
+          font-size: 0.8em;
+        }
+      }
+
+      .error::placeholder {
+        color: #f00;
+      }
+
+      .email-content {
+        position: relative;
+
+        #not-mail {
+          display: none;
+          position: absolute;
+          right: 5px;
+          bottom: -20px;
+          color: #f00;
+
+          @media screen and (max-width: 550px) {
+            font-size: 0.8em;
+          }
+        }
+      }
+
+      @keyframes dongle {
+        0% {
+          transform: translate(0px, 0px);
+        }
+        10% {
+          transform: translate(-10px, 0px);
+        }
+        20% {
+          transform: translate(10px, 0px);
+        }
+        30% {
+          transform: translate(-10px, 0px);
+        }
+        40% {
+          transform: translate(10px, 0px);
+        }
+        50% {
+          transform: translate(-10px, 0px);
+        }
+        60% {
+          transform: translate(10px, 0px);
+        }
+        70% {
+          transform: translate(-10px, 0px);
+        }
+        80% {
+          transform: translate(10px, 0px);
+        }
+        90% {
+          transform: translate(-10px, 0px);
+        }
+        100% {
+          transform: translate(0px, 0px);
+        }
+      }
+    }
+
+    .links {
+      padding: 100px 50px;
+      position: relative;
+
+      @media screen and (max-width: 550px) {
+        padding: 50px 20px;
+      }
+
+      .contactBox {
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 1rem 3rem;
+        width: 65%;
+        height: 200px;
+        @include flexCol;
+        justify-content: space-between;
+
+        li {
+          width: 360px;
+          border-bottom: 1px solid $black2;
+          padding-bottom: 5px;
+
+          @media screen and (max-width: 550px) {
+            width: 300px;
+          }
+          i {
+            font-size: 1.4em;
+            color: $darkBlue;
+
+            @media screen and (max-width: 550px) {
+              font-size: 1.1em;
+            }
+          }
+
+          a {
+            font-size: 1.4em;
+            transition: 0.2s ease;
+            margin-left: 0.5em;
+            color: $darkBlue;
+            transition: 0.2s ease-in-out;
+
+            @media screen and (max-width: 550px) {
+              font-size: 1.1em;
+            }
+
+            &:hover {
+              color: $blue;
+              letter-spacing: 1px;
+            }
+          }
+
+          .fa-at {
+            font-size: 1.2em;
+            @media screen and (max-width: 550px) {
+              font-size: 0.9em;
+            }
+          }
+        }
+      }
+
+      .socialNetWork {
+        text-align: center;
+        margin-top: 300px;
+        @include flexRow;
+        justify-content: space-around;
+
+        li {
+          background: $darkBlue;
+          width: 100px;
+          height: 80px;
+          @include flexCol;
+          justify-content: center;
+          transform: scaleY(0);
+          transform-origin: center;
+          transition: 0.2s ease;
+          transition: scale 0.1s;
+
+          @media screen and (max-width: 950px) {
+            width: 95px;
+            height: 75px;
+          }
+
+          @media screen and (max-width: 550px) {
+            width: 80px;
+            height: 60px;
+          }
+
+          &:hover {
+            a {
+              color: $white;
+            }
+          }
+          a {
+            width: 100%;
+            height: 100%;
+            color: grey;
+            @include flexCol;
+            justify-content: center;
+            transition: 0.3s ease-in-out;
+
+            i {
+              font-size: 2em;
+              margin-bottom: 5px;
+
+              @media screen and (max-width: 550px) {
+                font-size: 1.8em;
+              }
+            }
+            span {
+              font-size: 1.2em;
+              @media screen and (max-width: 550px) {
+                font-size: 1em;
+              }
+            }
+          }
+        }
+
+        @mixin networkAnim($timeout) {
+          animation: pop 1s forwards;
+          animation-delay: $timeout;
+        }
+        @keyframes pop {
+          to {
+            transform: scaleY(1);
+          }
+        }
+        li:nth-child(1) {
+          @include networkAnim(0.4s);
+        }
+        li:nth-child(2) {
+          @include networkAnim(0.8s);
+        }
+        li:nth-child(3) {
+          @include networkAnim(1.2s);
+        }
+      }
+    }
+  }
+
+  .thx {
+    margin: 100px 0 50px;
+    font-size: 3em;
+    text-align: center;
+
+    @media screen and(max-width: 650px) {
+      padding: 0 10px;
+      font-size: 2.5em;
+      margin: 60px 0;
+    }
+    @media screen and(max-width: 550px) {
+      font-size: 1.7em;
+    }
+
+    span {
+      animation: anim 3s linear infinite;
+    }
+
+    span:nth-child(1) {
+      animation-delay: 0.1s;
+    }
+    span:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+    span:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+    span:nth-child(3) {
+      animation-delay: 0.3s;
+    }
+    span:nth-child(4) {
+      animation-delay: 0.4s;
+    }
+    span:nth-child(5) {
+      animation-delay: 0.5s;
+    }
+    span:nth-child(6) {
+      animation-delay: 0.6s;
+    }
+    span:nth-child(7) {
+      animation-delay: 0.7s;
+    }
+    span:nth-child(8) {
+      animation-delay: 0.8s;
+    }
+    span:nth-child(9) {
+      animation-delay: 0.9s;
+    }
+    span:nth-child(10) {
+      animation-delay: 1s;
+    }
+    span:nth-child(11) {
+      animation-delay: 1.1s;
+    }
+    span:nth-child(12) {
+      animation-delay: 1.2s;
+    }
+    span:nth-child(13) {
+      animation-delay: 1.3s;
+    }
+    span:nth-child(14) {
+      animation-delay: 1.4s;
+    }
+    span:nth-child(15) {
+      animation-delay: 1.5s;
+    }
+    span:nth-child(16) {
+      animation-delay: 1.6s;
+    }
+    span:nth-child(17) {
+      animation-delay: 1.7s;
+    }
+    span:nth-child(18) {
+      animation-delay: 1.8s;
+    }
+    span:nth-child(19) {
+      animation-delay: 1.9s;
+    }
+    span:nth-child(20) {
+      animation-delay: 2s;
+    }
+    span:nth-child(21) {
+      animation-delay: 2.1s;
+    }
+    span:nth-child(22) {
+      animation-delay: 2.2s;
+    }
+    span:nth-child(23) {
+      animation-delay: 2.3s;
+    }
+    span:nth-child(24) {
+      animation-delay: 2.4s;
+    }
+    span:nth-child(25) {
+      animation-delay: 2.5s;
+    }
+    span:nth-child(26) {
+      animation-delay: 2.6s;
+    }
+    span:nth-child(27) {
+      animation-delay: 2.7s;
+    }
+  }
+}
