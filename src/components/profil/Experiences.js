@@ -33,11 +33,11 @@ const Experience = () => {
       <hr />
       <h4>Formations</h4>
       <div className="exp-4 exp">
-        <h5>Développeur Web - Autodidacte</h5>
+        <h5>Développeur JS - Autodidacte</h5>
         <p>Depuis 2019</p>
       </div>
       <div className="exp-5 exp">
-        <h5>Développeur JS - Esecad</h5>
+        <h5>Développeur Web - Esecad</h5>
         <p>2020-2021</p>
       </div>
     </div>

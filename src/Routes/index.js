@@ -19,7 +19,7 @@ const index = () => {
         <Route path="/profil" exact component={Profil} />
         <Route path="/portfolio" exact component={Portfolio} />
         <Route path="/contact" exact component={Contact} />
-        <Redirect to="/" />
+        <Redirect to="/profil" />
       </Switch>
     </Router>
   );

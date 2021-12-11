@@ -34,18 +34,7 @@
           position: relative;
 
           @media screen and (max-width: 550px) {
-            &::before,
-            &::after {
-              top: 0;
-              left: -10px;
-            }
-
-            &:checked:after {
-              transform: scale(1.3) translate(-25%, -25%);
-              top: 6px;
-              left: -3.5px;
-              background: $orange;
-            }
+            display: none;
           }
 
           &::before {
@@ -90,6 +79,10 @@
           &:checked + label {
             color: $yellow;
           }
+        }
+
+        label {
+          cursor: pointer;
         }
       }
     }

@@ -12,7 +12,7 @@ const Profil = () => {
       <NavBar />
       <div className="profil">
         <Parallax bgImage={img} strength={500}>
-          <header className="header" role="heading">
+          <header className="header">
             <div className="header-content">
               <TextAnim />
               <h2>D'une passion un métier</h2>
